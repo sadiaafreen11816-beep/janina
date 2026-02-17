@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Only For My Moyna 🤭</title>
+
+<style>
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:#fff0f5;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+color:#b3003b;
+overflow:hidden;
+}
+
+.box{
+width:90%;
+}
+
+.big{
+font-size:34px;
+font-weight:bold;
+margin-bottom:30px;
+}
+
+button{
+padding:12px 25px;
+margin:10px;
+border:none;
+border-radius:25px;
+font-size:18px;
+cursor:pointer;
+background:#ff4d88;
+color:white;
+}
+
+button:hover{
+background:#ff1a66;
+}
+
+.heart{
+position:fixed;
+top:-10px;
+color:red;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{transform:translateY(100vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="box" id="content">
+<div class="big">এই তোমার নাম কি চনি বন্ধু 🤔</div>
+<button onclick="yes()">হ্যা 😌</button>
+<button onclick="no()">না 😏</button>
+</div>
+
+<script>
+
+/* ❤️ ছোট হার্ট রেইন */
+setInterval(()=>{
+const h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=Math.random()*15+10+"px";
+h.style.animationDuration=Math.random()*3+2+"s";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),5000);
+},200);
+
+function yes(){
+document.getElementById("content").innerHTML=
+`<div class="big">ohwwww ময়না 🥺<br>love you ❤️</div>`;
+}
+
+function no(){
+document.getElementById("content").innerHTML=
+`<div class="big">😒 মিথ্যা কথা বলো কেন?<br>তুমি তো চনি বন্ধু 😙<br>আসো চুম্মা দেই 😙💋</div>`;
+}
+
+</script>
+
+</body>
+</html>
